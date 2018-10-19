@@ -4,13 +4,13 @@ function openNavMobile() {
 
     if (x.matches) {
         document.getElementById("mobileMenu").style.display = "block";
-        document.body.style.backgroundColor = "rgba(0,0,0,0.5)";
+        document.getElementById("fade").style.display = "block";
     }
 }
 
 function closeNavMobile() {
     document.getElementById("mobileMenu").style.display = "none";
-    document.body.style.backgroundColor = "#FAFAFA";
+    document.getElementById("fade").style.display = "none";
 }
 
 // Close side-nav if open in Deskop mode
