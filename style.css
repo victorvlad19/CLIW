@@ -1,0 +1,239 @@
+body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    transition: background-color .5s;
+}
+
+p {
+    padding: 20px;
+}
+
+h4 {
+    font-family: Halvetica, sans-serif;
+    font-size: 14px;
+    padding-left: 20px;
+    text-decoration: none;
+    color: #161616;
+
+}
+
+/*TOOLBAR*/
+/*Toolbar Main*/
+.toolbar {
+    color: #fff;
+    background: #0055BB;
+    position: fixed;
+    display: flex;
+    z-index: 1; /* Stay on top */
+    width: 100%;
+    height: 56px;
+    flex-direction: row;
+}
+
+.toolbar-mobile {
+    color: black;
+    background: #F5F5F5;
+    z-index: 1; /* Stay on top */
+    display: flex;
+    width: 100%;
+    height: 56px;
+    border-bottom:1px solid #e9e9e9;
+    position: relative;
+    flex-direction: row;
+}
+
+.shadow {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+/*Toolbar Icons*/
+.hamburger-menu {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 1em;
+    cursor: pointer;
+}
+
+.hamburger-menu-mobile {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 1em;
+    cursor: pointer;
+    color: #9A9A9A;
+}
+
+
+.right-icons {
+    margin: auto 2em auto auto;
+}
+
+.avatar, .cart {
+    padding-left: 1em;
+    cursor: pointer;
+
+}
+
+.search {
+    visibility: hidden;
+    cursor: pointer;
+}
+
+
+/*Title*/
+.title {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
+.title-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: large;
+}
+
+.title-text-mobile {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: large;
+    color: black;
+}
+
+/*SIDENAV*/
+.sidenav {
+    height: 100%;
+    width: 240px;
+    position: fixed;
+    margin-top: 56px;
+    top: 0;
+    left: 0;
+    background-color: #F5F5F5;
+    padding-top: 20px;
+
+}
+
+.sidenav a {
+    display: block;
+    color: black;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 16px;
+    padding: 12px;
+    padding-left: 20px;
+    text-decoration: none;
+}
+
+.sidenav a:hover:not(.active) {
+    background-color: #EBEBEB;
+    color: black;
+}
+
+.sidenavMobile {
+    display: none;
+    height: 100%;
+    width: 240px;
+    z-index: 1;
+    position: fixed;
+    margin-top: 0px;
+    top: 0;
+    left: 0;
+    background-color: #F5F5F5;
+}
+
+.sidenavMobile a{
+    display: block;
+    color: black;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 16px;
+    padding: 12px 12px 12px 20px;
+    text-decoration: none;
+}
+
+.sidenavMobile a:hover:not(.active) {
+    background-color: #EBEBEB;
+    color: black;
+}
+
+.first-cat-mobile {
+    padding-top: 19px;
+}
+
+/*SEARCH*/
+.searchBar {
+    background: #fff;
+    width: 80%;
+    max-width: 580px;
+    height: 42px;
+    margin: 8px auto 0 150px;
+    border-radius: 25px;
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.14);
+    transition: all 0.2s ease-in-out;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0
+}
+
+.searchBar i.searchBarSearchIcon {
+    height: 100%;
+    line-height: 42px;
+    float: left;
+    width: 52px;
+    text-align: center;
+    color: rgba(68, 68, 68, 0.5);
+}
+
+.searchBar input#searchBarInput {
+    height: 42px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    background: transparent;
+    width: calc(100% - 52px);
+    outline: none;
+    padding-right: 32px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.76);
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
+
+.searchBar i.clearSearchBarField {
+    position: absolute;
+    right: 12px;
+    top: 11px;
+    color: rgba(0, 0, 0, 0.84);
+    font-size: 20px;
+}
+
+.searchBar i.clearSearchBarField:hover {
+    cursor: pointer;
+}
+
+
+
+
+/*MAIN CONTENT*/
+.main {
+    margin-left: 240px; /* Same as the width of the sidebar */
+}
+
+.slide-bg {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+/*RESPONSIVE*/
+@media screen and (max-width: 1024px) {
+    .sidenav {display: none;}
+    .main {margin-left: 0px}
+    .searchBar {display: none}
+    .search {
+        visibility: visible;
+    }
+
+}
+

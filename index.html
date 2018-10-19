@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HEGE</title>
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="style.css">
+    <!--Google Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <!--Google Font-->
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<!--Toolbar-->
+<div class="toolbar shadow">
+    <!--Hamburger Menu-->
+    <i class="material-icons hamburger-menu" onclick="openNavMobile()">menu</i>
+    <!--Title-->
+    <div class="title">
+        <p class="title-text">HEGE</p>
+    </div>
+
+    <div class="searchBar">
+        <i class="material-icons searchBarSearchIcon noUserSelect">search</i>
+        <input type="text" name="header-search" value="" id="searchBarInput" placeholder="What do you want to search today ?">
+        <i class="material-icons clearSearchBarField noUserSelect" id="clearBtn" onClick="resetInput()">clear</i>
+    </div>
+
+    <!--Right Icons-->
+    <div class="right-icons">
+        <i class="material-icons search">search</i>
+        <i class="material-icons cart">shopping_basket</i>
+        <i class="material-icons avatar">person</i>
+    </div>
+</div>
+
+<!--Sidenav-->
+<div id="desktopMenu" class="sidenav">
+    <h4>CATEGORY 1</h4>
+    <a href="#">Empty text 1</a>
+    <a href="#">Empty text 2</a>
+    <a href="#">Empty text 3</a>
+    <a href="#">Empty text 4</a>
+    <h4>CATEGORY 2</h4>
+    <a href="#">Empty text 1</a>
+    <a href="#">Empty text 2</a>
+</div>
+
+<div id="mobileMenu" class="sidenavMobile">
+    <div class="toolbar-mobile">
+        <i class="material-icons hamburger-menu-mobile" onclick="closeNavMobile()">menu</i>
+        <!--Title-->
+        <div class="title">
+            <p class="title-text-mobile">HEGE</p>
+        </div>
+    </div>
+    <h4 class="first-cat-mobile">CATEGORY 1</h4>
+    <a href="#">Empty text 1</a>
+    <a href="#">Empty text 2</a>
+    <a href="#">Empty text 3</a>
+    <a href="#">Empty text 4</a>
+    <h4>CATEGORY 2</h4>
+    <a href="#">Empty text 1</a>
+    <a href="#">Empty text 2</a>
+</div>
+
+<!--Content-->
+<div class="main">
+
+    <div class="container" >
+        <img src="slider-bg2.png" class="slide-bg">
+    </div>
+
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
