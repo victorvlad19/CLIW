@@ -180,7 +180,8 @@ hr{
     position: fixed;
     left: 0;
     right: 0;
-    top: 0
+    top: 0;
+    z-index: 4;
 }
 
 .searchBar i.searchBarSearchIcon {
@@ -209,6 +210,7 @@ hr{
 }
 
 .searchBar i.clearSearchBarField {
+    display: none;
     position: absolute;
     right: 12px;
     top: 11px;
@@ -342,18 +344,62 @@ hr{
     width: 90%;
     display: grid;
     /* Define Auto Row size */
-    grid-auto-rows: 100px;
+    grid-auto-rows: 470px;
     /*Define our columns */
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 1em;
 }
 
-article {
-    border-radius: 10px;
-    padding: 20px;
-    color: #fff;
-    background-color: blue;
+/*CARDS*/
+.card {
+    border-radius: 2px;
+    color: black;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all .3s cubic-bezier(.25, .8, .25, 1);
+    position: relative;
+    display: inline-block
 }
+
+.card > img {
+    width: 100%;
+}
+
+.card-text-holder{
+    background-color: white;
+}
+
+.card-text-holder > h2 {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 18px;
+    margin-left: 20px;
+    font-weight: 400;
+}
+
+.card-text-holder > p {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.card-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 72px;
+    background-color: white;
+}
+
+.details {
+    font-family: Roboto, Arial, sans-serif;
+    color: #0055BB;
+    margin-left: 20px;
+    padding-top: 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 
 /*RESPONSIVE*/
 @media screen and (max-width: 1024px) {
@@ -373,5 +419,13 @@ article {
     .hats-models-test {margin-left: 30px}
     .sub-heading {margin-bottom: 20px}
     .hegeConfBtn {margin-left: 30px}
+}
+
+@media screen and (max-width: 684px){
+    .card > img {
+        width: 75%;
+        display:block;
+        margin:auto;
+    }
 }
 

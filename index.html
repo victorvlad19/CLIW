@@ -22,18 +22,19 @@
         <p class="title-text">HEGE</p>
     </div>
 
-    <div class="searchBar">
-        <i class="material-icons searchBarSearchIcon noUserSelect">search</i>
-        <input type="text" name="header-search" value="" id="searchBarInput" placeholder="What do you want to search today ?">
-        <i class="material-icons clearSearchBarField noUserSelect" id="clearBtn" onClick="resetInput()">clear</i>
-    </div>
-
     <!--Right Icons-->
     <div class="right-icons">
         <i class="material-icons search">search</i>
         <i class="material-icons cart dropdown">shopping_basket</i>
         <i class="material-icons avatar">person</i>
     </div>
+</div>
+
+<!--SEARCH-->
+<div class="searchBar">
+    <i class="material-icons searchBarSearchIcon noUserSelect" id="searchIcon">search</i>
+    <input type="text" name="header-search" value="" id="searchBarInput" placeholder="What do you want to search today ?" onfocus="Search()">
+    <i class="material-icons clearSearchBarField noUserSelect" id="clearBtn" onClick="resetInput()">clear</i>
 </div>
 
 <!--Sidenav-->
@@ -70,15 +71,105 @@
     <h2 class="hats-models-test">NEW HATS MODELS !</h2>
 
     <div class="main-grid">
-        <article>1</article>
-        <article>2</article>
-        <article>3</article>
-        <article>4</article>
-        <article>5</article>
-        <article>6</article>
-        <article>7</article>
-        <article>8</article>
-        <article>9</article>
+        <div class="card">
+            <img src="Images/1.jpg"/>
+            <div class="card-text-holder">
+                <h2>HAT TITLE 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.</p>
+            </div>
+            <div class="card-footer">
+                <hr>
+                <a class="details" href="#">SEE MORE</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="Images/2.jpg"/>
+            <div class="card-text-holder">
+            <h2>HAT TITLE 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.</p>
+            </div>
+            <div class="card-footer">
+                <hr>
+                <a class="details" href="#">SEE MORE</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="Images/3.png"/>
+            <div class="card-text-holder">
+                <h2>HAT TITLE 3</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.</p>
+            </div>
+            <div class="card-footer">
+                <hr>
+                <a class="details" href="#">SEE MORE</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="Images/4.png"/>
+            <div class="card-text-holder">
+                <h2>HAT TITLE 4</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.</p>
+            </div>
+            <div class="card-footer">
+                <hr>
+                <a class="details" href="#">SEE MORE</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="Images/5.png"/>
+            <div class="card-text-holder">
+                <h2>HAT TITLE 5</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.</p>
+            </div>
+            <div class="card-footer">
+                <hr>
+                <a class="details" href="#">SEE MORE</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="Images/6.png"/>
+            <div class="card-text-holder">
+                <h2>HAT TITLE 6</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.</p>
+            </div>
+            <div class="card-footer">
+                <hr>
+                <a class="details" href="#">SEE MORE</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="Images/7.png"/>
+            <div class="card-text-holder">
+                <h2>HAT TITLE 7</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.</p>
+            </div>
+            <div class="card-footer">
+                <hr>
+                <a class="details" href="#">SEE MORE</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="Images/8.png"/>
+            <div class="card-text-holder">
+                <h2>HAT TITLE 8</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.</p>
+            </div>
+            <div class="card-footer">
+                <hr>
+                <a class="details" href="#">SEE MORE</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="Images/9.png"/>
+            <div class="card-text-holder">
+                <h2>HAT TITLE 9</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.</p>
+            </div>
+            <div class="card-footer">
+                <hr>
+                <a class="details" href="#">SEE MORE</a>
+            </div>
+        </div>
     </div>
 
 
@@ -89,6 +180,8 @@
 </div>
 
 <div class="fade" id="fade" onclick="closeNavMobile()"></div>
+<div class="fade" id="fade-search" onclick="closeSearch()"></div>
+
 
 <!--MOBILE MENU-->
 <div id="mobileMenu" class="sidenavMobile">
