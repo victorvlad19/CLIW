@@ -1,0 +1,58 @@
+/*SIDENAV*/
+.sidenav {
+    height: 100%;
+    width: 240px;
+    position: fixed;
+    margin-top: 56px;
+    top: 0;
+    left: 0;
+    background-color: #F5F5F5;
+    padding-top: 20px;
+
+}
+
+.sidenav a {
+    display: block;
+    color: black;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 16px;
+    padding: 12px;
+    padding-left: 20px;
+    text-decoration: none;
+}
+
+.sidenav a:hover:not(.active) {
+    background-color: #EBEBEB;
+    color: black;
+}
+
+.sidenavMobile {
+    display: none;
+    height: 100%;
+    width: 240px;
+    z-index: 3;
+    position: fixed;
+    margin-top: 0px;
+    top: 0;
+    left: 0;
+    background-color: #F5F5F5;
+
+}
+
+.sidenavMobile a{
+    display: block;
+    color: black;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 16px;
+    padding: 12px 12px 12px 20px;
+    text-decoration: none;
+}
+
+.sidenavMobile a:hover:not(.active) {
+    background-color: #EBEBEB;
+    color: black;
+}
+
+.first-cat-mobile {
+    padding-top: 19px;
+}
