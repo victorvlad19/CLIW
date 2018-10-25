@@ -1,0 +1,172 @@
+body {
+    background: #fff;
+    margin: 0px;
+    position: relative;
+    top: -10px;
+}
+
+h2 {
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+h5 {
+    width: 300px;
+}
+
+main {
+    margin: 10px;
+    position: relative;
+    top: 66px;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 600;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+
+.top-bar {
+    background: #0055BB;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1; /* Stay on top */
+    width: 100%;
+    height: 56px;
+}
+
+.top-bar h2 {
+    color: #fff;
+}
+
+main .content .left-content {
+    display: inline-flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #ccc;
+    padding: 10px 20px;
+}
+
+/*Left content form*/
+main .content .left-content form {
+    width: 300px;
+}
+
+main .content .left-content form input {
+    display: block;
+    align-self: flex-start;
+    padding: 15px 10px;
+    margin: 10px 0px;
+    width: 300px;
+    background: white;
+    box-sizing: border-box;
+}
+
+#login-pref {
+    display: inline-block;
+    width: 13px;
+}
+
+
+#sep {
+    width: auto;
+}
+
+label {
+    margin-left: 10px;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 900;
+    font-size: 13px;
+    position: relative;
+    top: -2px;
+}
+
+.login-submit-btn {
+    font-family: 'Roboto', sans-serif;
+    width: 300px;
+    height: 50px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    background: #0A47BD;
+    border-radius: 2px;
+    font-weight: 600;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#create-btn {
+    background: black;
+}
+
+#sign-fb-btn {
+    background: #3A5897;
+}
+#sign-tw-btn {
+    background: #54ABED;
+}
+
+main .content .right-content {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 900;
+    font-size: 13px;
+}
+
+footer a {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (max-width: 660px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    main .content .left-content {
+        border-right: 0;
+        border-bottom: 2px solid #ccc;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    main .content .left-content {
+        border-right: 0;
+        border-bottom: 2px solid #ccc;
+    }
+
+    main .content .left-content form {
+        width: 200px;
+    }
+
+    main .content .left-content form input {
+        width: 200px;
+
+    }
+
+    .login-submit-btn {
+        width: 200px;       
+    }
+
+    footer {
+        margin-top: 20px;
+    }
+}
