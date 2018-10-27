@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HEGE</title>
+
+    <!--Google Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <!--Google Font-->
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="Css/index.css">
+    <link rel="stylesheet" href="Css/toolbar.css">
+    <link rel="stylesheet" href="Css/sidenav.css">
+    <link rel="stylesheet" href="Css/search.css">
+
+
+</head>
+<body>
+
+<!--Toolbar-->
+<div class="toolbar shadow" >
+    <!--Hamburger Menu-->
+    <i class="material-icons hamburger-menu" onclick="openNavMobile()">menu</i>
+    <!--Title-->
+    <div class="title">
+        <p class="title-text">HEGE</p>
+    </div>
+
+    <!--Right Icons-->
+    <div class="right-icons">
+        <i class="material-icons search">search</i>
+        <i class="material-icons cart dropdown">shopping_basket</i>
+        <a href="login.html"><i class="material-icons avatar">person</i></a>
+    </div>
+</div>
+
+<!--SEARCH-->
+<div class="searchBar">
+    <i class="material-icons searchBarSearchIcon noUserSelect" id="searchIcon">search</i>
+    <input type="text" name="header-search" value="" id="searchBarInput" placeholder="What do you want to search today ?" onfocus="Search()">
+    <i class="material-icons clearSearchBarField noUserSelect" id="clearBtn" onClick="resetInput()">clear</i>
+</div>
+
+
+<!--Content-->
+
+<div class="search-container">
+<div class="main-grid">
+    <div class="card">
+        <a href="product.html">
+            <img src="Images/1.jpg" class="card-image"/>
+        </a>
+        <div class="card-text-holder">
+            <h2>HAT TITLE 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.</p>
+        </div>
+        <div class="card-footer">
+            <hr>
+            <a class="details" href="http://localhost:63342/HEGE/product.html">SEE MORE</a>
+        </div>
+    </div>
+    <div class="card">
+        <img src="Images/2.jpg"/>
+        <div class="card-text-holder">
+            <h2>HAT TITLE 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.</p>
+        </div>
+        <div class="card-footer">
+            <hr>
+            <a class="details" href="#">SEE MORE</a>
+        </div>
+    </div>
+    <div class="card">
+        <img src="Images/3.png"/>
+        <div class="card-text-holder">
+            <h2>HAT TITLE 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.</p>
+        </div>
+        <div class="card-footer">
+            <hr>
+            <a class="details" href="#">SEE MORE</a>
+        </div>
+    </div>
+    <div class="card">
+        <img src="Images/4.png"/>
+        <div class="card-text-holder">
+            <h2>HAT TITLE 4</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.</p>
+        </div>
+        <div class="card-footer">
+            <hr>
+            <a class="details" href="#">SEE MORE</a>
+        </div>
+    </div>
+    <div class="card">
+        <img src="Images/5.png"/>
+        <div class="card-text-holder">
+            <h2>HAT TITLE 5</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.</p>
+        </div>
+        <div class="card-footer">
+            <hr>
+            <a class="details" href="#">SEE MORE</a>
+        </div>
+    </div>
+    <div class="card">
+        <img src="Images/6.png"/>
+        <div class="card-text-holder">
+            <h2>HAT TITLE 6</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.</p>
+        </div>
+        <div class="card-footer">
+            <hr>
+            <a class="details" href="#">SEE MORE</a>
+        </div>
+    </div>
+    <div class="card">
+        <img src="Images/7.png"/>
+        <div class="card-text-holder">
+            <h2>HAT TITLE 7</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.</p>
+        </div>
+        <div class="card-footer">
+            <hr>
+            <a class="details" href="#">SEE MORE</a>
+        </div>
+    </div>
+    <div class="card">
+        <img src="Images/8.png"/>
+        <div class="card-text-holder">
+            <h2>HAT TITLE 8</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.</p>
+        </div>
+        <div class="card-footer">
+            <hr>
+            <a class="details" href="#">SEE MORE</a>
+        </div>
+    </div>
+    <div class="card">
+        <img src="Images/9.png"/>
+        <div class="card-text-holder">
+            <h2>HAT TITLE 9</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.</p>
+        </div>
+        <div class="card-footer">
+            <hr>
+            <a class="details" href="#">SEE MORE</a>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="dropdown-content">
+    <p>Hello World!</p>
+</div>
+
+<div class="fade" id="fade" onclick="closeNavMobile()"></div>
+<div class="fade" id="fade-search" onclick="closeSearch()"></div>
+
+
+<!--MOBILE MENU-->
+<div id="mobileMenu" class="sidenavMobile">
+    <div class="toolbar-mobile">
+        <i class="material-icons hamburger-menu-mobile" onclick="closeNavMobile()">menu</i>
+        <!--Title-->
+        <div class="title">
+            <p class="title-text-mobile">HEGE</p>
+        </div>
+    </div>
+    <h4 class="first-cat-mobile">CATEGORY 1</h4>
+    <a href="#">Empty text 1</a>
+    <a href="#">Empty text 2</a>
+    <a href="#">Empty text 3</a>
+    <a href="#">Empty text 4</a>
+    <hr>
+    <h4>CATEGORY 2</h4>
+    <a href="#">Empty text 1</a>
+    <a href="#">Empty text 2</a>
+</div>
+
+<!--SCRIPTS-->
+<script src="Javasript/script.js"></script>
+
+</body>
+</html>
