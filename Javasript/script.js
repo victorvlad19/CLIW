@@ -32,3 +32,11 @@ function screenTest(e) {
 }
 mql.addListener(screenTest);
 
+// Redirect with click events (button in a --> error)
+function configRedirect1() {
+    window.location = "configS2.html";
+}
+
+function configRedirect2() {
+    window.location = "configS3.html";
+}
