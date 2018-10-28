@@ -1,1 +1,1 @@
-# CLIW
+# HEGE (headgear web assistant)
