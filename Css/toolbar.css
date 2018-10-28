@@ -60,6 +60,11 @@
     cursor: pointer;
 }
 
+.right-icons > a {
+    text-decoration: none;
+    color: white;
+}
+
 /*Title*/
 .title {
     align-items: center;
