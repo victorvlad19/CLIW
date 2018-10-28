@@ -1,0 +1,194 @@
+
+/*===============Line */
+.container-line {
+    width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+}
+
+
+.steps {
+    margin-bottom: 10px;
+    position: relative;
+    height: 25px;
+}
+
+.steps > div {
+    position: absolute;
+    top: 0;
+    -webkit-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
+    height: 25px;
+    padding: 0 5px;;
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+    -webkit-transition: .3s all ease;
+    transition: .3s all ease;
+}
+
+.steps > div > span {
+    line-height: 25px;
+    height: 25px;
+    margin: 0;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.step-one {
+    left: 0;
+    visibility: visible;
+}
+
+.step-two {
+    left: 50%;
+    visibility: hidden;
+
+}
+
+.step-two-active {
+    left: 50%;
+}
+
+.step-three {
+    left: 100%;
+    visibility: hidden;
+}
+
+.step-three-active {
+    left: 100%;
+    visibility: visible;
+}
+
+.line {
+    width: 100%;
+    height: 5px;
+    background: #ffffff;
+    position: relative;
+    border-radius: 10px;
+    overflow: visible;
+    margin-bottom: 50px;
+}
+
+.line .dot {
+    position: absolute;
+    top: 50%;
+    width: 15px;
+    height: 15px;
+    left: 0;
+    background: #ddd;
+    border-radius: 50%;
+    -webkit-transition: .3s all ease;
+    transition: .3s all ease;
+    -webkit-transform: translate(-50%, -50%) scale(.5);
+    -ms-transform: translate(-50%, -50%) scale(.5);
+    transform: translate(-50%, -50%) scale(.5);
+}
+
+.line .dot-full {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    width: 15px;
+    height: 15px;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    border-radius: 50%;
+    -webkit-transition: .3s all ease;
+    transition: .3s all ease;
+}
+
+.line .dot-full-mid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    border-radius: 50%;
+    -webkit-transition: .3s all ease;
+    transition: .3s all ease;
+}
+
+.line .dot-full-end {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 15px;
+    height: 15px;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    border-radius: 50%;
+    -webkit-transition: .3s all ease;
+    transition: .3s all ease;
+}
+
+
+
+.line .dot.zero {
+    left: 0%;
+    background: #0055BB;
+}
+
+.line .dot.zero-end {
+    left: 0%;
+    background: #ffffff;
+}
+
+.line .dot.center {
+    left: 50%;
+    background: #ffffff;
+}
+
+
+.line .dot.center-active {
+    left: 50%;
+    background: #0055BB;
+}
+
+.line .dot.full {
+    left: 100%;
+    background: #ffffff;
+}
+
+.line .dot.full-active {
+    left: 100%;
+    background: #0055BB;
+}
+
+/*List of items*/
+.list-item {
+    background: #fff;
+    font-family: sans-serif;
+    height: 30px;
+    border-radius: 5px;
+    line-height: 30px;
+    list-style: none;
+    margin-bottom: 14px;
+    padding: 10px 10px;
+    text-align: center;
+    width: 320px;
+}
+
+
+/*DROPDOWN*/
+
+.custom-dropdown select {
+    width: 100%;
+    color: #878787;
+    padding: 11px 20px;
+    text-align: left;
+    border: 0px;
+    margin-bottom: 14px;
+    font-size: 16px;
+    font-weight: 300;
+    border-radius: 3px;
+    text-indent: 0.01px;
+    text-overflow: '';
+    -webkit-appearance: button; /* hide default arrow in chrome OSX */
+}
