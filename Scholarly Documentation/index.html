@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Scholarly HTML</title>
+    <link rel="stylesheet" href="css/scholarly.min.css">
+    <script src="js/scholarly.min.js"></script>
+
+  </head>
+  <body prefix="schema: http://schema.org">
+    <header>
+      <div class="banner">
+        <img src="scholarly-html.svg" width="227" height="50" alt="Scholarly HTML logo">
+        <div class="status">Community Draft</div>
+      </div>
+      <h1>HEGE</h1>
+    </header>
+    <!--
+      XXX
+      - check refs
+      - the math example has too much maths
+      - bring back some of the old style
+      - make semantics, validation, processing sub-sections of each structural element
+      - have a section before that for general constructs
+        - explain why use RDFa
+        - explain our patterns: RDFa, roles
+      - figure captions need to get set throughout
+      - dedication? see doc-dedication
+      - syntactic constraints (prefix)
+      - needs more sthenurines
+      - examples of everything
+      - some notes on using Semantic CSS
+      - needs more RDFa in the spec itself
+    -->
+    <div role="contentinfo">
+      <dl>
+        <dt>Authors</dt>
+        <dd>
+          Victor Vlad
+          &amp;
+            Dan Alexandru Bizu
+        </dd>
+      </dl>
+    </div>
+
+    <section typeof="sa:Abstract" id="abstract" role="doc-abstract">
+      <h2>Abstract</h2>
+      <p>
+        We developed an online store to shop for headwear items. The store includes the ability to view a product with augmented reality.
+        Moreover we also offer the possibility for potential buyers to look for their favorite product with a configurator
+        for season or fashion preferences.
+      </p>
+    </section>
+    <section id="introduction" role="doc-introduction">
+      <!-- review? -->
+      <h2>Introduction</h2>
+      <p>
+
+          Today's headwear items are a necessity that takes into account trends and fashion. To help our potential clients, we built a platform to buy headwear from a long list. In order to be able to browse every object we have put together a graphical configurator that guides the user through several preliminary stages. At the same time, I made a search function to get to the desired object as soon as possible.
+      </p>
+      <p>
+        Our high-level goals are to:
+      </p>
+      <ul>
+          <li>Be fully funcitioning on modern Web browsers.</li>
+          <li>Create material responsive design.</li>
+          <li>To persuade the user to use the VR function.</li>
+          <li>To convince clients to use our configurator.</li>
+        <li>Build on top of open, royalty-free standards.</li>
+        <li>Long-term viability as a data format.</li>
+      </ul>
+      <p>
+          We want to reach all the planned values in order to attract as many buyers as possible on our platform for headwear. For this we hope that the VR function will play an important role as well as configurator page.
+      </p>
+    </section>
+
+    <section id="structure">
+      <!-- review? -->
+      <h2>Design</h2>
+      <p>
+        To make design as interesting as possible for a potential buyer, we used Google material design.
+        We went through four iteration processes until we reached the final product.
+        We used as primary color blue and for page elements we used a range of white colors.
+        Also black is used for the logo and text content and VR button.
+        Design was made for Desktop, Tablet, Mobile and is fully responsive.
+      </p>
+      <p>Home page going through the design process: </p>
+
+      <img src="images/img2.png" height="2312" width="767"/>
+      <p>Login page in the design process: </p>
+      <img src="images/img1.png" height="1542" width="767"/></section>
+
+
+
+     <section id="semantics">
+      <!-- review? -->
+      <h2>User Interaction</h2>
+      <p>
+        If the user wants to find an article, then he click on the HEGE Configurator button on the home page.
+        If he wants to search for an article, he writes the name of the item in the search bar and press enter.
+        If he want to go on an article he clicks on it.
+        If he wants to use the VR function, press the specific button for the item.
+      </p>
+
+      </section>
+    </section>
+
+    <section id="scholarly-article">
+      <!-- review? -->
+      <h2>Code management</h2>
+      <p>
+        To start using our project clone it from Github and click on index.html in the structure tree.
+      </p>
+<pre>
+<a>Css</a>
+└─<a>configurator.css</a>
+└─<a>index.css</a>
+└─<a>login.css</a>
+└─<a>product.css</a>
+└─<a>search.css</a>
+└─<a>sidenav.css</a>
+└─<a>toolbar.css</a>
+<a>Javascript</a>
+└─<a>script.css</a>
+<a>Images</a>
+└─<a>1.jpg</a>
+└─<a>2.jpg</a>
+└─<a>3.png</a>
+└─<a>....</a>
+└─<a>9.png</a>
+<a>index.html</a>
+<a>login.html</a>
+<a>register.html</a>
+<a>product.html</a>
+<a>search.html</a>
+<a>configS1.html</a>
+<a>configS2.html</a>
+<a>configS3.html</a>
+<a>slider-bg3.png</a>
+
+</pre>
+    </section>
+
+
+  </body>
+</html>
