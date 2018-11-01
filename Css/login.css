@@ -12,6 +12,7 @@
     position: absolute;
     z-index: -1;
     height: 100%;
+    background-size: cover;
 }
 
 .fog {
@@ -24,7 +25,7 @@
 
 .login-content {
     height:100vh;
-    z-index: 2;
+    /* z-index: 2; */
     margin-left: 550px;
     background-color: #0B48BE;
 }
@@ -80,6 +81,7 @@
 /*Login and Register Buttons*/
 .active {
     font-family: Roboto, Arial, sans-serif;
+    font-weight: 600;
     text-decoration: none;
     color: white;
     margin-right: 10px;
@@ -135,7 +137,8 @@
     font-size: 12px;
     margin-left: 10px;
 }
-.social{
+
+.social {
     margin-top: 60px;
 }
 
