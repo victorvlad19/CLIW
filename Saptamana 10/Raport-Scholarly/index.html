@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Scholarly HTML</title>
+    <link rel="stylesheet" href="css/scholarly.min.css">
+    <script src="js/scholarly.min.js"></script>
+  </head>
+  <body prefix="schema: http://schema.org">
+    <header>
+      <div class="banner">
+        <img src="scholarly-html.svg" width="227" height="50" alt="Scholarly HTML logo">
+        <div class="status">Community Draft</div>
+      </div>
+      <h1>Arhitectura aplicaţiei Web</h1>
+    </header>
+    <!--
+      XXX
+      - check refs
+      - the math example has too much maths
+      - bring back some of the old style
+      - make semantics, validation, processing sub-sections of each structural element
+      - have a section before that for general constructs
+        - explain why use RDFa
+        - explain our patterns: RDFa, roles
+      - figure captions need to get set throughout
+      - dedication? see doc-dedication
+      - syntactic constraints (prefix)
+      - needs more sthenurines
+      - examples of everything
+      - some notes on using Semantic CSS
+      - needs more RDFa in the spec itself
+    -->
+    <div role="contentinfo">
+      <dl>
+        <dt>Authors</dt>
+        <dd>
+          Victor Vlad (B2)
+          &amp;
+         Dan Bizu (B2)
+        </dd>
+        <dt>License</dt>
+        <dd>
+          <a href="http://creativecommons.org/licenses/by/4.0/">CC-BY</a>
+        </dd>
+      </dl>
+    </div>
+    <section typeof="sa:Abstract" id="abstract" role="doc-abstract">
+
+      <h2>Intermediate stages of project development</h2>
+      <p>
+          <b>Implementation.</b> During the Implementation Phase we have completed implementing communication with the database and
+          adding data into database. We will continue to work on framing the application in the SPA, adding
+          the VR module and its compatibility with the mobile, working on the checkout basket with the client side database and
+          fully implementing HEGE Configurator.
+      </p>
+        <p><b>Testing.</b> During the Test Phase, we will focus on finding
+            uncover errors and bugs in the our project that need to be resolved.</p>
+
+        <p><b>Deployment and Maintenance.</b> During the Deployment and Maintenance Phase, we will put our
+            source on a host and we will offer support for the next 3 months.</p>
+    </section>
+
+
+    <section  id="abstract1" role="doc-abstract">
+      <h2>Data modeling / APIs</h2>
+
+      <section id="Root1">
+        <!-- review? -->
+        <h3>Firebase</h3>
+        <p>
+          Firebase provides a realtime database and backend as a service.  The service provides us an API that allows
+          application data to be synchronized across clients and stored on Firebase's cloud. Firebase  provides client libraries
+          that enable integration with our client. Becouse we use the realtime database we can secure data
+          by using the Firebase server-side-enforced security rules. Data for our project looks like this:
+        </p>
+
+          <pre><code>
+    {
+  "Hat_1" : {
+    "Description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.",
+    "Ext_Description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent efficitur lacus non neque luctus scelerisque. Phasellus vel arcu mi. Proin justo tellus, sollicitudin et felis vel, tristique lobortis tellus. Sed sit amet nulla non turpis suscipit consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec ac augue ut ante vestibulum lobortis. Sed tempor tellus ac risus hendrerit, vel tincidunt diam porttitor. Suspendisse cursus lectus vel lorem imperdiet ornare. Cras aliquet in erat sit amet tempor. Proin ultricies faucibus tortor vitae pharetra.",
+    "Name" : "Hat 1",
+    "Value" : "230 Ron"
+  },
+  "Hat_2" : {
+    "Description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.",
+    "Ext_Description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent efficitur lacus non neque luctus scelerisque. Phasellus vel arcu mi. Proin justo tellus, sollicitudin et felis vel, tristique lobortis tellus. Sed sit amet nulla non turpis suscipit consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec ac augue ut ante vestibulum lobortis. Sed tempor tellus ac risus hendrerit, vel tincidunt diam porttitor. Suspendisse cursus lectus vel lorem imperdiet ornare. Cras aliquet in erat sit amet tempor. Proin ultricies faucibus tortor vitae pharetra.",
+    "Name" : "Hat 2",
+    "Value" : "125 Ron"
+  },
+        ...
+  }
+          </code></pre>
+
+          <p>Data is stored as JSON and synchronized in realtime to every connected client. When we build our JavaScript application,
+              all of your clients share one Realtime Database instance and automatically receive updates with the newest data.</p>
+
+          <p>The Realtime Database provides a declarative rules language that allows us to define how our data should be structured,
+              how it should be indexed, and when our data can be read from and written to. </p>
+
+      </section>
+
+
+        <section id="Root2">
+            <h3>AR</h3>
+            <p>First, we include a-frame, an effort started by MozillaVR to build VR experiences. A-frame
+                contains three.js. Then we simply include AR.js for a-frame. AR.js will make the 3d displayed in
+                AR run very fast on any phone, even if it’s a 2–3 year old phone!</p>
+
+            <section id="Child1">
+                <h3>A-Frame</h3>
+                <p>A-Frame handles the 3D and WebVR boilerplate required to get running across platforms including mobile,
+                    desktop, Vive, and Rift. A-Frame is a powerful framework on top of three.js, providing a declarative, composable,
+                    reusable entity-component structure for three.js.
+                    While A-Frame can be used from HTML, we have unlimited access to JavaScript, DOM APIs, three.js and WebGL.</p>
+            </section>
+
+            <section id="Child2">
+                <h3>three.js</h3>
+                <p>three.js is a library that provides Canvas 2D, SVG, CSS3D and WebGL renderers.
+                    It is used to create and display animated 3D computer graphics in a web browser.
+                    Three.js uses WebGL.</p>
+            </section>
+
+            <section id="Child3">
+                <h3>AR.js</h3>
+                <p>Ar.js it's used for speed optimizations. It can optimize performance from 5fps on high-end phone,
+                    to 60fps on 2years old phone.</p>
+            </section>
+
+
+        </section>
+
+    </section>
+
+
+    <section  id="abstract2" role="doc-abstract">
+      <h2>Client-based storage solutions</h2>
+      <p>
+          For client-side storage, we will use the IndexedDB API because it  allow us to use transactions and objects.
+          We can use database versioning and common database functions can be easily written using functions similar to an ORM.
+          We can also use as an fallback method if the browser does not support a database  an server solution like Firebase.
+      </p>
+
+        <pre><code>
+    var dbPromise = idb.open('test-db2', 1, function(upgradeDb) {
+    console.log('construim un obiect in baza de date');
+    if (!upgradeDb.objectStoreNames.contains('test')) {
+      upgradeDb.createObjectStore('test');
+    }});
+        </code></pre>
+
+
+    </section>
+
+    <section id="Root3">
+        <h2>Relevance to the Single Page Application</h2>
+        <p>The main idea to add SPA to our project is to dynamically load content into the current page,
+            without loading an entire page from the server. We will use this when user clicks on a product.
+        </p>
+
+        <p><b>Models.</b> Instead of storing data in the DOM or in random objects, there is a set of
+            in-memory models which represent all of the state/data in the application.
+        </p>
+
+        <p><b>Views.</b> Views reflect the content of the models, therefore a change in the model would cause the view to change.</p>
+
+        <p> Write-only DOM. Since the models contain the data and the views adapt according to those models,
+            there is no need to read state/data from the DOM, therefore the main advantage of the SPA is better performance.</p>
+    </section>
+
+
+
+  </body>
+</html>
