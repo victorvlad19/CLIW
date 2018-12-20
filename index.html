@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="Css/toolbar.css">
     <link rel="stylesheet" href="Css/sidenav.css">
 
+
+
 </head>
 <body>
 
@@ -56,10 +58,10 @@
 
 
 <!--Content-->
-<div class="main">
+<div class="main page active" id="home">
 
     <div class="container" >
-        <img src="slider-bg3.png" alt="Presentation background" class="slide-bg">
+        <img src="slider-bg3.png" class="slide-bg">
 
         <div class="head-content">
             <h2 class="heading">CONFIGURE YOUR HAT !</h2>
@@ -74,113 +76,24 @@
 
     <h2 class="hats-models-test">NEW HATS MODELS !</h2>
 
-    <div class="main-grid">
-        <div class="card">
-            <a href="product.html">
-            <img src="Images/1.jpg" alt="Hat 1" class="card-image"/>
-            </a>
-            <div class="card-text-holder">
-                <h2>HAT TITLE 1</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.</p>
-            </div>
-            <div class="card-footer">
-                <hr>
-                <a class="details" href="http://localhost:63342/HEGE/product.html">SEE MORE</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="Images/2.jpg" alt="Hat 2" />
-            <div class="card-text-holder">
-            <h2>HAT TITLE 2</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.</p>
-            </div>
-            <div class="card-footer">
-                <hr>
-                <a class="details" href="#">SEE MORE</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="Images/3.png" alt="Hat 3" />
-            <div class="card-text-holder">
-                <h2>HAT TITLE 3</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.</p>
-            </div>
-            <div class="card-footer">
-                <hr>
-                <a class="details" href="#">SEE MORE</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="Images/4.png" alt="Hat 4" />
-            <div class="card-text-holder">
-                <h2>HAT TITLE 4</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.</p>
-            </div>
-            <div class="card-footer">
-                <hr>
-                <a class="details" href="#">SEE MORE</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="Images/5.png" alt="Hat 5" />
-            <div class="card-text-holder">
-                <h2>HAT TITLE 5</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.</p>
-            </div>
-            <div class="card-footer">
-                <hr>
-                <a class="details" href="#">SEE MORE</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="Images/6.png" alt="Hat 6" />
-            <div class="card-text-holder">
-                <h2>HAT TITLE 6</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.</p>
-            </div>
-            <div class="card-footer">
-                <hr>
-                <a class="details" href="#">SEE MORE</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="Images/7.png" alt="Hat 7" />
-            <div class="card-text-holder">
-                <h2>HAT TITLE 7</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.</p>
-            </div>
-            <div class="card-footer">
-                <hr>
-                <a class="details" href="#">SEE MORE</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="Images/8.png" alt="Hat 8" />
-            <div class="card-text-holder">
-                <h2>HAT TITLE 8</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.</p>
-            </div>
-            <div class="card-footer">
-                <hr>
-                <a class="details" href="#">SEE MORE</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="Images/9.png" alt="Hat 9" />
-            <div class="card-text-holder">
-                <h2>HAT TITLE 9</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.</p>
-            </div>
-            <div class="card-footer">
-                <hr>
-                <a class="details" href="#">SEE MORE</a>
-            </div>
-        </div>
-    </div>
+    <!--Loading from database !-->
+    <div class="main-grid" id="main-grid"></div>
 
 </div>
 
+<div class="main-product page" id="detail">
+
+    <nav id="breadcrumb" class="breadcrumb">
+        <a href="#" class="breadcrumb-link">Home</a>
+        <a href="#" class="breadcrumb-end" id="breadcrumb-name">Hat Title 1</a>
+    </nav>
+
+    <h1 id="w1">Woooorks !!!</h1>
+</div>
+
+
 <div class="dropdown-content">
+
     <p>Hello World!</p>
 </div>
 
@@ -209,7 +122,12 @@
 </div>
 
 <!--SCRIPTS-->
+<script src="Javasript/spa.js"></script>
 <script src="Javasript/script.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+<script src="Javasript/database.js"></script>
+
+
 
 </body>
 </html>
