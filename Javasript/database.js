@@ -70,23 +70,57 @@ ref.on("value", function(snapshot) {
         // Append Final Div To Cards
         document.getElementById("main-grid").appendChild(card);
 
+
+
         // TODO: Add Here Html Code
-        console.log(itemVal["Name"]);
+        // console.log(itemVal["Name"]);
     });
 
-
-
+    onProductCliked();
 
 }, function (error) {
     console.log("Error: " + error.code);
 });
 
+
+function onProductCliked() {
+    let n = document.getElementsByClassName("nav-link details");
+    for(let e = 0 ; e < n.length ; e++) {
+        n[e].addEventListener('click', function() {
+            // Dynamic change product image
+            let img = "Images/";
+            let img_semi = img.concat(e+1);
+            let img_final = img_semi.concat(".png");
+            document.getElementById("image-src").src=img_final;
+            // Forge Query
+            let str1 = "Hat_";
+            let q = str1.concat(e+1);
+            // Query Database
+            let query = firebase.database().ref(q);
+            query.on('value', function(snapshot) {
+                // Put name from database
+                document.getElementById("breadcrumb-name").textContent=snapshot.val()["Name"];
+                // Put title from database
+                document.getElementById("product-title-name").textContent=snapshot.val()["Name"].toUpperCase();
+                // Put price from database
+                document.getElementById("product-price").textContent=snapshot.val()["Value"];
+            });
+
+        });
+    }
+}
+
 function showProduct() {
-    document.getElementById("breadcrumb-name").textContent="newtext";
 
-    var x = document.getElementsByClassName("example");
 
-    window.alert("");
+
+    // console.log(item);
+    // let x = document.getElementsByClassName("example");
+
+    // let query = firebase.database().ref('Hat_1');
+    // query.on('value', function(snapshot) {
+    //     console.log(snapshot.val()["Name"]);
+    // });
 
     // window.alert("Succes!");
 }
