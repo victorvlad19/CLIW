@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>HEGE</title>
-
     <!--Google Icons-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
@@ -13,9 +12,6 @@
     <link rel="stylesheet" href="Css/index.css">
     <link rel="stylesheet" href="Css/toolbar.css">
     <link rel="stylesheet" href="Css/sidenav.css">
-
-
-
 </head>
 <body>
 
@@ -31,7 +27,13 @@
     <!--Right Icons-->
     <div class="right-icons">
         <i class="material-icons search">search</i>
-        <i class="material-icons cart dropdown">shopping_basket</i>
+        <div class="dropdown">
+            <i class="material-icons cart">shopping_basket</i>
+            <div class="dropdown-content">
+                <ul class="shopping-cart-items" id="shopping-cart-items"></ul>
+                <p class="dropdown-text" id="dropdown-text">You have no items in your basket</p>
+            </div>
+        </div>
         <a href="login.html"><i class="material-icons avatar">person</i></a>
     </div>
 </div>
@@ -45,15 +47,18 @@
 
 <!--Sidenav-->
 <div id="desktopMenu" class="sidenav">
-    <h4>CATEGORY 1</h4>
-    <a href="#">Empty text 1</a>
-    <a href="#">Empty text 2</a>
-    <a href="#">Empty text 3</a>
-    <a href="#">Empty text 4</a>
+    <h4>HATS FOR WOMEN</h4>
+    <a href="#detail">Hat 4</a>
+    <a href="#detail">Hat 7</a>
     <hr>
-    <h4>CATEGORY 2</h4>
-    <a href="#">Empty text 1</a>
-    <a href="#">Empty text 2</a>
+    <h4>HATS FOR MEN</h4>
+    <a href="#detail">Hat 1</a>
+    <a href="#detail">Hat 2</a>
+    <a href="#detail">Hat 3</a>
+    <a href="#detail">Hat 5</a>
+    <a href="#detail">Hat 6</a>
+    <a href="#detail">Hat 8</a>
+    <a href="#detail">Hat 9</a>
 </div>
 
 
@@ -82,20 +87,30 @@
 </div>
 
 <div class="main-product page" id="detail">
-
     <nav id="breadcrumb" class="breadcrumb">
-        <a href="#" class="breadcrumb-link">Home</a>
-        <a href="#" class="breadcrumb-end" id="breadcrumb-name">Hat Title 1</a>
+        <a href="#home" class="breadcrumb-link">Home</a>
+        <a href="#detail" class="breadcrumb-end" id="breadcrumb-name">Hat Title 1</a>
     </nav>
+    <div class="product-grid">
+        <img id="image-src" src="Images/1.png"/>
+        <div class="product-head">
+            <h2 id="product-title-name">HAT TITLE 1</h2>
+            <h3 id="product-price">230 Ron</h3>
+            <p>See how product looks in VR: </p>
+            <button class="btn-vr">Enter in VR</button>
+            <p>Product is in stock: </p>
+            <button class="btn-basket" onclick="addtoCart()">Add to basket</button>
+        </div>
+    </div>
 
-    <h1 id="w1">Woooorks !!!</h1>
+    <div class="product-more">
+        <h3>Product details</h3>
+        <p id="product-more-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent efficitur lacus non neque luctus scelerisque. Phasellus vel arcu mi. Proin justo tellus, sollicitudin et felis vel, tristique lobortis tellus. Sed sit amet nulla non turpis suscipit consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec ac augue ut ante vestibulum lobortis. Sed tempor tellus ac risus hendrerit, vel tincidunt diam porttitor. Suspendisse cursus lectus vel lorem imperdiet ornare. Cras aliquet in erat sit amet tempor. Proin ultricies faucibus tortor vitae pharetra.</p>
+    </div>
 </div>
 
 
-<div class="dropdown-content">
 
-    <p>Hello World!</p>
-</div>
 
 <div class="fade" id="fade" onclick="closeNavMobile()"></div>
 <div class="fade" id="fade-search" onclick="closeSearch()"></div>
@@ -110,15 +125,18 @@
             <p class="title-text-mobile">HEGE</p>
         </div>
     </div>
-    <h4 class="first-cat-mobile">CATEGORY 1</h4>
-    <a href="#">Empty text 1</a>
-    <a href="#">Empty text 2</a>
-    <a href="#">Empty text 3</a>
-    <a href="#">Empty text 4</a>
+    <h4>HATS FOR WOMEN</h4>
+    <a href="#detail">Hat 4</a>
+    <a href="#detail">Hat 7</a>
     <hr>
-    <h4>CATEGORY 2</h4>
-    <a href="#">Empty text 1</a>
-    <a href="#">Empty text 2</a>
+    <h4>HATS FOR MEN</h4>
+    <a href="#detail">Hat 1</a>
+    <a href="#detail">Hat 2</a>
+    <a href="#detail">Hat 3</a>
+    <a href="#detail">Hat 5</a>
+    <a href="#detail">Hat 6</a>
+    <a href="#detail">Hat 8</a>
+    <a href="#detail">Hat 9</a>
 </div>
 
 <!--SCRIPTS-->
