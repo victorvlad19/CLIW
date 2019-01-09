@@ -92,6 +92,15 @@ hr{
     display: inline-block;
 }
 
+.dropdown-hidden {
+    position: relative;
+    display: none;
+}
+
+.dropdown-hidden > i {
+    color: orange;
+}
+
 .dropdown-content {
     display: none;
     position:absolute;
@@ -102,7 +111,16 @@ hr{
     z-index: 2;
 }
 
+.dropdown-content > button {
+    margin-left: 120px;
+    margin-bottom: 15px;
+}
+
 .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-hidden:hover .dropdown-content {
     display: block;
 }
 

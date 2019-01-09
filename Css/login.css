@@ -12,22 +12,20 @@
     position: absolute;
     z-index: -1;
     height: 100%;
-    background-size: cover;
 }
 
 .fog {
     position: absolute;
     height: 100vh;
     width: 550px;
-    background-color: rgba(0, 0, 0, 0.61);
     z-index: 1;
 }
 
 .login-content {
     height:100vh;
-    /* z-index: 2; */
+    z-index: 2;
     margin-left: 550px;
-    background-color: #0B48BE;
+    background-color: #ffffff;
 }
 
 .title {
@@ -67,13 +65,13 @@
 
 .login-items > h2 {
     font-family: Roboto, Arial, sans-serif;
-    color: white;
+    color: black;
     margin-bottom: 10px;
 }
 
 .login-items > h4 {
     font-family: Roboto, Arial, sans-serif;
-    color: #d7d7d7;
+    color: black;
     font-weight: 100;
     margin-bottom: 30px;
 }
@@ -81,7 +79,6 @@
 /*Login and Register Buttons*/
 .active {
     font-family: Roboto, Arial, sans-serif;
-    font-weight: 600;
     text-decoration: none;
     color: white;
     margin-right: 10px;
@@ -137,8 +134,7 @@
     font-size: 12px;
     margin-left: 10px;
 }
-
-.social {
+.social{
     margin-top: 60px;
 }
 
@@ -155,6 +151,33 @@
     color: white;
     text-decoration: none;
     padding-right: 5px;
+}
+
+/*LOGIN UI*/
+.mdl-shadow--2dp{
+    box-shadow: none !important;
+}
+
+.firebaseui-card-header {
+    padding: 0px !important;
+}
+
+.firebaseui-card-content {
+    padding: 0px !important;
+}
+
+.firebaseui-card-actions {
+    padding: 0px !important;
+}
+
+.firebaseui-title {
+    font-family: Roboto, Arial, sans-serif !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+}
+
+.mdl-button--raised.mdl-button--colored {
+    background: #0055BB !important;
 }
 
 /*RESPONSIVE*/
