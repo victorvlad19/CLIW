@@ -1,14 +1,5 @@
 // Initialize Firebase
-var config = {
-    apiKey: "AIzaSyDPGoimflpwdDgW4wAZ72i9Df9427YsVSk",
-    authDomain: "cliw-9cac1.firebaseapp.com",
-    databaseURL: "https://cliw-9cac1.firebaseio.com",
-    projectId: "cliw-9cac1",
-    storageBucket: "cliw-9cac1.appspot.com",
-    messagingSenderId: "262436664884"
-};
-firebase.initializeApp(config);
-
+let firebase = app_fireBase;
 const ref = firebase.database().ref();
 let counter = 0;
 
@@ -108,21 +99,6 @@ function onProductCliked() {
 
         });
     }
-}
-
-function showProduct() {
-
-
-
-    // console.log(item);
-    // let x = document.getElementsByClassName("example");
-
-    // let query = firebase.database().ref('Hat_1');
-    // query.on('value', function(snapshot) {
-    //     console.log(snapshot.val()["Name"]);
-    // });
-
-    // window.alert("Succes!");
 }
 
 
