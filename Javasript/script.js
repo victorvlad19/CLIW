@@ -67,18 +67,29 @@ function addtoCart() {
     item_content.appendChild(item_price);
 
     const item_remove = document.createElement('a');
-    item_remove.href="";
+    item_remove.onclick = e => {
+        e.target.parentNode.parentNode.remove();
+        count--;
+        updateCount(count);
+    };
+
     item_remove.className = "item-quantity";
     let text_item_remove = document.createTextNode("Remove");
     item_remove.appendChild(text_item_remove);
     item_content.appendChild(item_remove);
+
 
     li.appendChild(item_content);
 
     ul.appendChild(li);
 
     count++;
+    updateCount(count);
 
+    window.alert("Item added to basket !");
+}
+
+function updateCount(count) {
     if (count >= 1) {
         let s1 = "You have ";
         let s2 = s1.concat(count);
@@ -88,7 +99,6 @@ function addtoCart() {
         document.getElementById("dropdown-text").textContent="You have no items in your basket";
     }
 
-    window.alert("Item added to basket !");
 }
 
 
