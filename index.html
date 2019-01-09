@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="Css/index.css">
     <link rel="stylesheet" href="Css/toolbar.css">
     <link rel="stylesheet" href="Css/sidenav.css">
+
+
 </head>
 <body>
 
@@ -34,7 +36,17 @@
                 <p class="dropdown-text" id="dropdown-text">You have no items in your basket</p>
             </div>
         </div>
-        <a href="login.html"><i class="material-icons avatar">person</i></a>
+
+        <div class="dropdown-hidden" id="dropdown-hidden">
+            <i class="material-icons avatar">person</i>
+            <div class="dropdown-content">
+                <p class="dropdown-text" id="dropdown-text-1">Email</p>
+                <button onclick="mainApp.logOut()">Logout</button>
+            </div>
+        </div>
+
+        <a href="login.html"><i class="material-icons avatar" id="login-icon">person</i></a>
+
     </div>
 </div>
 
@@ -140,12 +152,12 @@
 </div>
 
 <!--SCRIPTS-->
+<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+<script src="Javasript/firebase.js"></script>
 <script src="Javasript/spa.js"></script>
 <script src="Javasript/script.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+<script src="Javasript/main_login.js"></script>
 <script src="Javasript/database.js"></script>
-
-
 
 </body>
 </html>
