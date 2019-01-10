@@ -51,7 +51,7 @@
 
 .title > a {
     text-decoration: none;
-    color: white;
+    /* color: white; */
 }
 
 /*Login Right*/
@@ -80,7 +80,7 @@
 .active {
     font-family: Roboto, Arial, sans-serif;
     text-decoration: none;
-    color: white;
+    /* color: white; */
     margin-right: 10px;
     border-bottom: 2px solid white;
     padding-bottom: 10px;
@@ -100,11 +100,14 @@
 }
 
 /*Input*/
+input {
+    border-width: 0.5px;
+}
 .input {
     width: 100%;
     padding: 11px 20px;
     text-align: left;
-    border: 0px;
+    /* border: 0px; */
     border-radius: 6px;
     font-size: 16px;
     font-weight: 300;
@@ -115,16 +118,17 @@
 /*Login Button*/
 .submit {
     font-family: Roboto, Arial, sans-serif;
-    border-radius: 6px;
+    border-radius: 2px;
     border: 0px;
     padding: 11px 28px;
-    background-color: white;
-    color: #0B48BE;
+    background-color: #0055BB;
+    color: white;
     font-size: 14px;
     font-weight: 700;
     text-decoration: none;
     cursor: pointer;
     margin-top: 16px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 .pass-lost {
