@@ -26,11 +26,10 @@
         <div class="login-content">
             <div class="login-items">
                 <h2>We help you choose the next headwear.</h2>
-                <h4>Question 1 ?</h4>
 
-                <!--Content Line & Bullets-->
-                <div class="container-line">
-                    <!--Steps Text-->
+
+
+                <!-- <div class="container-line">
                     <div class="steps">
                         <div class="step step-one">
                             <div class="liner"></div>
@@ -45,35 +44,63 @@
                             <span>Done</span>
                         </div>
                     </div>
-                    <!--Line-->
+
                     <div class="line">
                         <div class="dot-full"></div>
                         <div class="dot zero"></div>
                         <div class="dot center"></div>
                         <div class="dot full"></div>
                     </div>
-                </div>
-                <!--Content Dropdown-->
+                </div> -->
+
+
+                <label for="color">What color would you like your headwear to be?</label>
                 <span class="custom-dropdown">
-                    <select>
-                        <option>Option 1</option>
-                        <option>Option 2</option>
-                        <option>Option 3</option>
-                        <option>Option 4</option>
-                        <option>Option 5</option>
+                    <select id="color">
+                        <option>Black</option>
+                        <option>Blue</option>
+                        <option>Yellow</option>
+                        <option>Green</option>
+                        <option>Brown</option>
+                        <option>Red</option>
+                        <option>Grey</option>
                     </select>
                 </span>
 
+                <label for="season">For what season would you like your headwear to be suitable?</label>
                 <span class="custom-dropdown">
-                    <select>
-                        <option>Option 1</option>
-                        <option>Option 2</option>
-                        <option>Option 3</option>
-                        <option>Option 4</option>
-                        <option>Option 5</option>
+                    <select id="season">
+                        <option value="multiple">Multiple seasons</option>
+                        <option value="summer">Summer</option>
+                        <option value="autumn">Autumn</option>
+                        <option value="winter">Winter</option>
+                        <option value="spring">Spring</option>
                     </select>
                 </span>
-                <button class="submit" onclick="configRedirect1()">Next</button>
+
+                <label for="season">What gender?</label>
+                <span class="custom-dropdown" id="season">
+                    <select>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other" selected>Other</option>
+                    </select>
+                </span>
+
+                <label>What type of headwear?</label>
+                <span class="custom-dropdown">
+                    <select>
+                        <option selected>Other</option>
+                        <option>Hats</option>
+                        <option>Beanies</option>
+                        <option>Caps</option>
+                    </select>
+                </span>
+
+                <button class="submit" onclick="updatePreferences()">Apply</button>
+
+
+                <!-- <button class="submit" onclick="configRedirect1()">Next</button> -->
                 <!-- <a href="configS2.html"><button class="submit">Next</button></a> -->
                 <div>
                 </div>
@@ -83,6 +110,7 @@
 
     <!--SCRIPTS-->
     <script src="Javasript/script.js"></script>
+    <script src="Javasript/configurator.js"></script>
 
 </body>
 
