@@ -102,6 +102,28 @@ function onProductCliked() {
 }
 
 
+function onSideItemClicked() {
+    window.onclick = e => {
+        // Dynamic change product image
+        thenum = e.target.innerText.match(/\d+/)[0]
+        let img = "Images/";
+        let img_semi = img.concat(thenum);
+        let img_final = img_semi.concat(".png");
+        document.getElementById("image-src").src=img_final;
+        // Query Database
+        let q = e.target.innerText.replace(/\s+/g, '_');
+        let query = firebase.database().ref(q);
+        query.on('value', function(snapshot) {
+            // Put name from database
+            document.getElementById("breadcrumb-name").textContent=snapshot.val()["Name"];
+            // Put title from database
+            document.getElementById("product-title-name").textContent=snapshot.val()["Name"].toUpperCase();
+            // Put price from database
+            document.getElementById("product-price").textContent=snapshot.val()["Value"];
+        });
+    }
+}
+
 //
 // <div class="card">
 //     <img src="Images/9.png"/>
