@@ -16,7 +16,7 @@ var mainApp = {};
 
             document.getElementById("dropdown-hidden").style.display = "inline-block";
             document.getElementById("login-icon").style.display = "none";
-            document.getElementById("dropdown-text-1").innerHTML = email;
+            document.getElementById("dropdown-text-1").innerHTML = "You are currently logged in with: "+ email;
 
         } else {
             // User is signed out....
