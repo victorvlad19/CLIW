@@ -16,13 +16,15 @@ function closeNavMobile() {
 function Search() {
     document.getElementById("fade-search").style.display = "block";
     document.getElementById("clearBtn").style.display = "block";
-    document.getElementById("searchIcon").style.color="#000"
+    document.getElementById("searchIcon").style.color="#000";
+    document.getElementById("dropdown-content-search").style.display = "block";
 }
 
 function closeSearch() {
     document.getElementById("fade-search").style.display = "none";
     document.getElementById("clearBtn").style.display = "none";
-    document.getElementById("searchIcon").style.color="#A1A1A1"
+    document.getElementById("searchIcon").style.color="#A1A1A1";
+    document.getElementById("dropdown-content-search").style.display = "none";
 }
 
 // Close side-nav if open in Deskop mode
@@ -39,6 +41,7 @@ function addtoCart() {
     // Get Product Name & Price
     let pName = document.getElementById("product-title-name").textContent;
     let pPrice =  document.getElementById("product-price").textContent;
+    let pImage = document.getElementById("image-src").src;
     // Dincamicaly create li structure
     let ul = document.getElementById("shopping-cart-items");
 
@@ -46,7 +49,7 @@ function addtoCart() {
     li.className = "clearfix";
 
     let img = document.createElement("img");
-    img.src = "Images/1.png";
+    img.src = pImage;
     img.height = 70;
     img.width = 90;
     li.appendChild(img);
@@ -74,13 +77,11 @@ function addtoCart() {
     };
 
     item_remove.className = "item-quantity";
-    let text_item_remove = document.createTextNode("Remove");
+    let text_item_remove = document.createTextNode("⊗ Remove");
     item_remove.appendChild(text_item_remove);
     item_content.appendChild(item_remove);
 
-
     li.appendChild(item_content);
-
     ul.appendChild(li);
 
     count++;
@@ -95,8 +96,10 @@ function updateCount(count) {
         let s2 = s1.concat(count);
         let s3 = s2.concat(" items in your basket");
         document.getElementById("dropdown-text").textContent=s3;
+        document.getElementById("cart-footer").style.backgroundColor= "#f8f8f8";
     } else {
         document.getElementById("dropdown-text").textContent="You have no items in your basket";
+        document.getElementById("cart-footer").style.backgroundColor= "#ffffff";
     }
 
 }
