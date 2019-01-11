@@ -33,15 +33,29 @@
             <i class="material-icons cart">shopping_basket</i>
             <div class="dropdown-content">
                 <ul class="shopping-cart-items" id="shopping-cart-items"></ul>
-                <p class="dropdown-text" id="dropdown-text">You have no items in your basket</p>
+                <div class="cart-footer" id="cart-footer">
+                    <p class="dropdown-text-cart" id="dropdown-text">You have no items in your basket</p>
+                </div>
             </div>
         </div>
 
         <div class="dropdown-hidden" id="dropdown-hidden">
-            <i class="material-icons avatar">person</i>
+            <i class="material-icons avatar">how_to_reg</i>
             <div class="dropdown-content">
-                <p class="dropdown-text" id="dropdown-text-1">Email</p>
-                <button onclick="mainApp.logOut()">Logout</button>
+
+                <div class="row-login">
+                <div class="column-login left-login" >
+                    <i class="material-icons avatar">person_outline</i>
+                </div>>
+                <div class="column-login right-login">
+                    <p class="dropdown-text" id="dropdown-text-1">Email</p>
+                </div>
+                </div>
+
+
+                <div class="login-footer">
+                    <button onclick="mainApp.logOut()">Logout</button>
+                </div>
             </div>
         </div>
 
@@ -55,6 +69,14 @@
     <i class="material-icons searchBarSearchIcon noUserSelect" id="searchIcon">search</i>
     <input type="text" name="header-search" value="" id="searchBarInput" placeholder="What do you want to search today ?" onfocus="Search()">
     <i class="material-icons clearSearchBarField noUserSelect" id="clearBtn" onClick="resetInput()">clear</i>
+    <div class="dropdown-content-search" id="dropdown-content-search">
+        <ul class="search_list" id="search_list">
+            <li><a>Hat 1</a></li>
+            <li><a>Hat 5</a></li>
+            <li><a>Hat 7</a></li>
+        </ul>
+    </div>
+
 </div>
 
 <!--Sidenav-->
