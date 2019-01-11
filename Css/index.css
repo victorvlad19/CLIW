@@ -97,10 +97,6 @@ hr{
     display: none;
 }
 
-.dropdown-hidden > i {
-    color: orange;
-}
-
 .dropdown-content {
     display: none;
     position:absolute;
@@ -109,6 +105,19 @@ hr{
     min-width: 300px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 2;
+}
+
+.dropdown-content-search {
+    display: none;
+    width: 580px;
+    position:absolute;
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: #ffffff;
+    min-width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+    transition: all .5s ease-in-out;
 }
 
 .dropdown-content > button {
@@ -125,8 +134,18 @@ hr{
 }
 
 .dropdown-text{
-    color: #161616;
+    color: #666666;
+    text-align: left;
+    font-family: "Roboto", "Segoe UI", serif;
+    font-size: 14px;
+}
+
+.dropdown-text-cart{
+    color: #666666;
     text-align: center;
+    font-family: "Roboto", "Segoe UI", serif;
+    font-size: 14px;
+    padding-top: 12px;
 }
 
 .shopping-cart-items {
@@ -147,18 +166,23 @@ hr{
 .item-name {
     display: block;
     padding-top: 10px;
-    font-size: 16px;
+    font-size: 14px;
     color: #161616;
     font-weight: bold;
+    font-family: "Roboto", "Segoe UI", serif;
 }
 
 .item-price {
     color: #0055BB;
     margin-right: 8px;
+    font-size: 14px;
+    font-family: "Roboto", "Segoe UI", serif;
 }
 
 .item-quantity {
     color: #ABB0BE;
+    font-size: 13.5px;
+    font-family: "Roboto", "Segoe UI", serif;
 }
 
 .shop-item-content {
@@ -395,6 +419,79 @@ hr{
     font-family: Roboto, Arial, sans-serif;
     margin-left: 30px;
     margin-top: 30px;
+}
+
+/*SEARCH ITEMS*/
+.search_list{
+    list-style-type: none;
+    display:block;
+
+    margin-left: -40px;
+    margin-right: 40px;
+}
+.search_list>li{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    width:100%;
+    max-height: 100%;
+    color: #666666;
+}
+
+.search_list>li:hover{
+    background-color: #F1F1F1;
+}
+
+/*CART*/
+.cart-footer{
+    background-color: #ffffff;
+    width: auto;
+    height: 40px;
+    margin-top: -16px;
+}
+
+/*LOGIN*/
+.login-footer{
+    background-color: #f8f8f8;
+    width: auto;
+    height: 40px;
+}
+
+.login-footer > button{
+    background-color: transparent;
+    color: #0055BB;
+    border: none;
+    border-radius: 4px;
+    height: 32px;
+    margin-top: 3px;
+    margin-left: 28px;
+    font-family: "Roboto", "Segoe UI", serif;
+}
+
+.column-login {
+    float: left;
+    padding: 10px;
+}
+
+.left-login {
+    width: 25%;
+}
+
+.left-login > i{
+    font-size: 2.9em;
+    margin-left: -25px;
+    margin-top: 9px;
+    color: #0055BB;
+}
+
+.right-login {
+    width: 58%;
+}
+
+.row-login:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /*RESPONSIVE*/
