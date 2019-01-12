@@ -15,23 +15,7 @@
       </div>
       <h1>Arhitectura aplicaţiei Web</h1>
     </header>
-    <!--
-      XXX
-      - check refs
-      - the math example has too much maths
-      - bring back some of the old style
-      - make semantics, validation, processing sub-sections of each structural element
-      - have a section before that for general constructs
-        - explain why use RDFa
-        - explain our patterns: RDFa, roles
-      - figure captions need to get set throughout
-      - dedication? see doc-dedication
-      - syntactic constraints (prefix)
-      - needs more sthenurines
-      - examples of everything
-      - some notes on using Semantic CSS
-      - needs more RDFa in the spec itself
-    -->
+
     <div role="contentinfo">
       <dl>
         <dt>Authors</dt>
@@ -79,17 +63,23 @@
           <pre><code>
     {
   "Hat_1" : {
+    "Color" : "Black",
     "Description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.",
     "Ext_Description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent efficitur lacus non neque luctus scelerisque. Phasellus vel arcu mi. Proin justo tellus, sollicitudin et felis vel, tristique lobortis tellus. Sed sit amet nulla non turpis suscipit consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec ac augue ut ante vestibulum lobortis. Sed tempor tellus ac risus hendrerit, vel tincidunt diam porttitor. Suspendisse cursus lectus vel lorem imperdiet ornare. Cras aliquet in erat sit amet tempor. Proin ultricies faucibus tortor vitae pharetra.",
+    "Gender" : "Male",
     "Name" : "Hat 1",
-    "Value" : "230 Ron"
+    "Season" : "Spring",
+    "Value" : "130 Ron"
   },
   "Hat_2" : {
+    "Color" : "Gray",
     "Description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.",
     "Ext_Description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent efficitur lacus non neque luctus scelerisque. Phasellus vel arcu mi. Proin justo tellus, sollicitudin et felis vel, tristique lobortis tellus. Sed sit amet nulla non turpis suscipit consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec ac augue ut ante vestibulum lobortis. Sed tempor tellus ac risus hendrerit, vel tincidunt diam porttitor. Suspendisse cursus lectus vel lorem imperdiet ornare. Cras aliquet in erat sit amet tempor. Proin ultricies faucibus tortor vitae pharetra.",
+    "Gender" : "Male",
     "Name" : "Hat 2",
+    "Season" : "Summer",
     "Value" : "125 Ron"
-  },
+  }
         ...
   }
           </code></pre>
@@ -171,7 +161,41 @@
             there is no need to read state/data from the DOM, therefore the main advantage of the SPA is better performance.</p>
     </section>
 
+    <section id="Root4">
+        <h2>Use case</h2>
+        <p>When the user first enters the main page he will notice the interface containing the product list and HEGE Configurator.
+            Also from the main interface can use the search function to find products.
+            On the product page, he can use the AR feature.
+        </p>
+        <img src="Diagram%202018-12-13%2009-25-54.png">
+    </section>
 
+    <section id="Root5">
+        <h2>Testing and Practical Exploitation</h2>
+        <p>The app has been tested during the developement process but we have provided a few post-implementation tests, and they are:</p>
+        <ul>
+            <li>Checking every possible state for each functionality</li>
+            <li>Testing the visual feedback.</li>
+            <li>Testing responsiveness and the hitboxes</li>
+            <li>Compatibility tests on Android.</li>
+        </ul>
+    </section>
+
+    <section id="Root6">
+        <h2>Developement progress</h2>
+        <p>
+            There were a few things that needed to be implemented so our app would offer the full experience it was supposed to offer, things like:
+        </p>
+        <ul>
+            <li>Adding a database</li>
+            <li>Adding hats to the shopping cart </li>
+            <li>Adding search functionality</li>
+            <li>Adding Log-In feature</li>
+            <li>Making pages SPA</li>
+            <li>Displaying hats based on your preferences/needs </li>
+            <li>Trying out the hats to see how it fits you (AR)</li>
+        </ul>
+    </section>
 
   </body>
 </html>
