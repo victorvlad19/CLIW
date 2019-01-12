@@ -22,7 +22,7 @@
     <i class="material-icons hamburger-menu" onclick="openNavMobile()">menu</i>
     <!--Title-->
     <div class="title">
-        <p class="title-text" onclick="goHome()">HEGE</p>
+        <p class="title-text" onclick="goHome()" itemprop="name">HEGE</p>
     </div>
 
     <!--Right Icons-->
@@ -53,7 +53,7 @@
 
 
                 <div class="login-footer">
-                    <button onclick="mainApp.logOut()">Logout</button>
+                    <button itemtype="https://schema.org/RegisterAction" onclick="mainApp.logOut()">Logout</button>
                 </div>
             </div>
         </div>
@@ -67,7 +67,7 @@
 <div class="searchBar">
     <i class="material-icons searchBarSearchIcon noUserSelect" id="searchIcon">search</i>
 
-    <input type="text" name="header-search" value="" id="searchBarInput" placeholder="What do you want to search today ?" onfocus="Search()" oninput="onSearch()">
+    <input itemtype="https://schema.org/SearchAction" itemprop="searchText" type="text" name="header-search" value="" id="searchBarInput" placeholder="What do you want to search today ?" onfocus="Search()" oninput="onSearch()">
 
     <i class="material-icons clearSearchBarField noUserSelect" id="clearBtn" onClick="clearButton()">clear</i>
     <div class="dropdown-content-search" id="dropdown-content-search">
@@ -79,17 +79,17 @@
 <!--Sidenav-->
 <div id="desktopMenu" class="sidenav">
     <h4>HATS FOR WOMEN</h4>
-    <a href="#detail" onclick="onSideItemClicked()">Hat 4</a>
-    <a href="#detail" onclick="onSideItemClicked()" >Hat 7</a>
+    <a itemprop="sidenavText" href="#detail" onclick="onSideItemClicked()">Hat 4</a>
+    <a itemprop="sidenavText" href="#detail" onclick="onSideItemClicked()" >Hat 7</a>
     <hr>
     <h4>HATS FOR MEN</h4>
-    <a href="#detail" onclick="onSideItemClicked()">Hat 1</a>
-    <a href="#detail" onclick="onSideItemClicked()">Hat 2</a>
-    <a href="#detail" onclick="onSideItemClicked()">Hat 3</a>
-    <a href="#detail" onclick="onSideItemClicked()">Hat 5</a>
-    <a href="#detail" onclick="onSideItemClicked()">Hat 6</a>
-    <a href="#detail" onclick="onSideItemClicked()">Hat 8</a>
-    <a href="#detail" onclick="onSideItemClicked()">Hat 9</a>
+    <a itemprop="sidenavText" href="#detail" onclick="onSideItemClicked()">Hat 1</a>
+    <a itemprop="sidenavText" href="#detail" onclick="onSideItemClicked()">Hat 2</a>
+    <a itemprop="sidenavText" href="#detail" onclick="onSideItemClicked()">Hat 3</a>
+    <a itemprop="sidenavText" href="#detail" onclick="onSideItemClicked()">Hat 5</a>
+    <a itemprop="sidenavText" href="#detail" onclick="onSideItemClicked()">Hat 6</a>
+    <a itemprop="sidenavText" href="#detail" onclick="onSideItemClicked()">Hat 8</a>
+    <a itemprop="sidenavText" href="#detail" onclick="onSideItemClicked()">Hat 9</a>
 </div>
 
 
@@ -100,10 +100,10 @@
         <img src="slider-bg3.png" class="slide-bg">
 
         <div class="head-content">
-            <h2 class="heading">CONFIGURE YOUR HAT !</h2>
-            <p class="sub-heading">Ut enim ad minima veniam, quis nostrum exerc autem vel eum iure veniam, quis nostrusequat veniam lorem ipsum dolor.</p>
+            <h2 itemprop="configuratorTitle" class="heading">CONFIGURE YOUR HAT !</h2>
+            <p itemprop="configuratorDescription" class="sub-heading">Ut enim ad minima veniam, quis nostrum exerc autem vel eum iure veniam, quis nostrusequat veniam lorem ipsum dolor.</p>
             <div class="hegeConfBtn" onclick="openConfigurator()">
-                <a class="hegeConfBtn-text" >HEGE Configurator</a>
+                <a itemprop="hegeConfigurator" class="hegeConfBtn-text" >HEGE Configurator</a>
             </div>
         </div>
     </div>
@@ -122,17 +122,17 @@
         <img id="image-src" src="Images/1.png"/>
         <div class="product-head">
             <h2 id="product-title-name">HAT TITLE 1</h2>
-            <h3 id="product-price">230 Ron</h3>
+            <h3 itemprop="price" id="product-price">230 Ron</h3>
             <p>See how product looks in VR: </p>
-            <button onclick="location.href='ar.html'" class="btn-vr">Enter in VR</button>
-            <p>Product is in stock: </p>
-            <button class="btn-basket" onclick="addtoCart()">Add to basket</button>
+            <button itemprop="AR" onclick="location.href='ar.html'" class="btn-vr">Enter in VR</button>
+            <p itemprop="stock">Product is in stock: </p>
+            <button itemprop="toCart" class="btn-basket" onclick="addtoCart()">Add to basket</button>
         </div>
     </div>
 
     <div class="product-more">
-        <h3>Product details</h3>
-        <p id="product-more-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent efficitur lacus non neque luctus scelerisque. Phasellus vel arcu mi. Proin justo tellus, sollicitudin et felis vel, tristique lobortis tellus. Sed sit amet nulla non turpis suscipit consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec ac augue ut ante vestibulum lobortis. Sed tempor tellus ac risus hendrerit, vel tincidunt diam porttitor. Suspendisse cursus lectus vel lorem imperdiet ornare. Cras aliquet in erat sit amet tempor. Proin ultricies faucibus tortor vitae pharetra.</p>
+        <h3 itemprop="productDetails">Product details</h3>
+        <p itemprop="productDetailsText" id="product-more-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent efficitur lacus non neque luctus scelerisque. Phasellus vel arcu mi. Proin justo tellus, sollicitudin et felis vel, tristique lobortis tellus. Sed sit amet nulla non turpis suscipit consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec ac augue ut ante vestibulum lobortis. Sed tempor tellus ac risus hendrerit, vel tincidunt diam porttitor. Suspendisse cursus lectus vel lorem imperdiet ornare. Cras aliquet in erat sit amet tempor. Proin ultricies faucibus tortor vitae pharetra.</p>
     </div>
 </div>
 
@@ -195,11 +195,11 @@
             <p class="title-text-mobile" onclick="goHome()">HEGE</p>
         </div>
     </div>
-    <h4>HATS FOR WOMEN</h4>
+    <h4 itemprop="name">HATS FOR WOMEN</h4>
     <a href="#detail" onclick="onSideItemClicked()">Hat 4</a>
     <a href="#detail" onclick="onSideItemClicked()">Hat 7</a>
     <hr>
-    <h4>HATS FOR MEN</h4>
+    <h4 itemprop="name">HATS FOR MEN</h4>
     <a href="#detail" onclick="onSideItemClicked()">Hat 1</a>
     <a href="#detail" onclick="onSideItemClicked()">Hat 2</a>
     <a href="#detail" onclick="onSideItemClicked()">Hat 3</a>
