@@ -15,16 +15,22 @@ function closeNavMobile() {
 
 function Search() {
     document.getElementById("fade-search").style.display = "block";
-    document.getElementById("clearBtn").style.display = "block";
+    document.getElementById("clearBtn").style.display = "none";
     document.getElementById("searchIcon").style.color="#000";
-    document.getElementById("dropdown-content-search").style.display = "block";
+}
+
+function clearButton() {
+    document.getElementById("searchBarInput").value = "";
+    document.getElementById("dropdown-content-search").style.display="none";
+    document.getElementById("clearBtn").style.display = "none";
 }
 
 function closeSearch() {
     document.getElementById("fade-search").style.display = "none";
     document.getElementById("clearBtn").style.display = "none";
     document.getElementById("searchIcon").style.color="#A1A1A1";
-    document.getElementById("dropdown-content-search").style.display = "none";
+    document.getElementById("dropdown-content-search").style.display="none";
+    document.getElementById("searchBarInput").value = "";
 }
 
 // Close side-nav if open in Deskop mode

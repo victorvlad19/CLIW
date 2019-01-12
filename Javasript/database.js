@@ -107,26 +107,81 @@ function onSideItemClicked() {
         let hats = ["Hat 1", "Hat 2", "Hat 3", "Hat 4", "Hat 5", "Hat 6", "Hat 7", "Hat 8", "Hat 9"];
         arraycontainshats = (hats.indexOf(e.target.innerText) > -1);
         if (arraycontainshats) {
-            // Dynamic change product image
-            thenum = e.target.innerText.match(/\d+/)[0]
-            let img = "Images/";
-            let img_semi = img.concat(thenum);
-            let img_final = img_semi.concat(".png");
-            document.getElementById("image-src").src = img_final;
+
             // Query Database
             let q = e.target.innerText.replace(/\s+/g, '_');
-            let query = firebase.database().ref(q);
-            query.on('value', function (snapshot) {
-                // Put name from database
-                document.getElementById("breadcrumb-name").textContent = snapshot.val()["Name"];
-                // Put title from database
-                document.getElementById("product-title-name").textContent = snapshot.val()["Name"].toUpperCase();
-                // Put price from database
-                document.getElementById("product-price").textContent = snapshot.val()["Value"];
-            });
+            showPage(q)
         }
     }
 }
+
+
+function onSearch() {
+    let hats = ["hat 1", "hat 2", "hat 3", "hat 4", "hat 5", "hat 6", "hat 7", "hat 8", "hat 9"];
+    text = document.getElementById("searchBarInput").value;
+
+    const ul = document.getElementById("search_list");
+
+    if (text !== "") {
+        document.getElementById("dropdown-content-search").style.display = "block";
+        // Clear Button
+        document.getElementById("clearBtn").style.display = "block";
+        // Find Searched String
+        const matches = hats.filter(s => s.includes(text));
+        if (matches.length > 0){
+            ul.innerHTML = '';
+            for (const elem in matches) {
+                const li = document.createElement("li");
+
+
+                li.appendChild(document.createTextNode( capFirstLetter(matches[elem])));
+
+                li.onclick = e => {
+                    sText = e.target.innerHTML;
+                    window.location.href = "#detail";
+
+                    // Query Database
+                    let q = sText.replace(/\s+/g, '_');
+                    showPage(q)
+                    closeSearch();
+                };
+
+
+                ul.appendChild(li);
+            }
+        }
+
+    } else {
+        ul.innerHTML = '';
+        document.getElementById("dropdown-content-search").style.display = "none";
+        // Clear Button
+        document.getElementById("clearBtn").style.display = "none";
+    }
+}
+
+
+function showPage(q) {
+    let query = firebase.database().ref(q);
+    query.on('value', function (snapshot) {
+        // Put name from database
+        document.getElementById("breadcrumb-name").textContent = snapshot.val()["Name"];
+        // Put title from database
+        document.getElementById("product-title-name").textContent = snapshot.val()["Name"].toUpperCase();
+        // Put price from database
+        document.getElementById("product-price").textContent = snapshot.val()["Value"];
+    });
+    // Dynamic change product image
+    thenum = q.match(/\d+/)[0]
+    let img = "Images/";
+    let img_semi = img.concat(thenum);
+    let img_final = img_semi.concat(".png");
+    document.getElementById("image-src").src = img_final;
+}
+
+function capFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 
 //
 // <div class="card">

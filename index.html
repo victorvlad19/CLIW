@@ -67,8 +67,10 @@
 <!--SEARCH-->
 <div class="searchBar">
     <i class="material-icons searchBarSearchIcon noUserSelect" id="searchIcon">search</i>
-    <input type="text" name="header-search" value="" id="searchBarInput" placeholder="What do you want to search today ?" onfocus="Search()">
-    <i class="material-icons clearSearchBarField noUserSelect" id="clearBtn" onClick="resetInput()">clear</i>
+
+    <input type="text" name="header-search" value="" id="searchBarInput" placeholder="What do you want to search today ?" onfocus="Search()" oninput="onSearch()">
+
+    <i class="material-icons clearSearchBarField noUserSelect" id="clearBtn" onClick="clearButton()">clear</i>
     <div class="dropdown-content-search" id="dropdown-content-search">
         <ul class="search_list" id="search_list">
             <li><a>Hat 1</a></li>
