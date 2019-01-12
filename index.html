@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="Css/toolbar.css">
     <link rel="stylesheet" href="Css/sidenav.css">
 
-
 </head>
 <body>
 
@@ -23,7 +22,7 @@
     <i class="material-icons hamburger-menu" onclick="openNavMobile()">menu</i>
     <!--Title-->
     <div class="title">
-        <p class="title-text">HEGE</p>
+        <p class="title-text" onclick="goHome()">HEGE</p>
     </div>
 
     <!--Right Icons-->
@@ -72,11 +71,7 @@
 
     <i class="material-icons clearSearchBarField noUserSelect" id="clearBtn" onClick="clearButton()">clear</i>
     <div class="dropdown-content-search" id="dropdown-content-search">
-        <ul class="search_list" id="search_list">
-            <li><a>Hat 1</a></li>
-            <li><a>Hat 5</a></li>
-            <li><a>Hat 7</a></li>
-        </ul>
+        <ul class="search_list" id="search_list"></ul>
     </div>
 
 </div>
@@ -107,16 +102,12 @@
         <div class="head-content">
             <h2 class="heading">CONFIGURE YOUR HAT !</h2>
             <p class="sub-heading">Ut enim ad minima veniam, quis nostrum exerc autem vel eum iure veniam, quis nostrusequat veniam lorem ipsum dolor.</p>
-            <div class="hegeConfBtn">
-                <a href="configS1.html" class="hegeConfBtn-text">HEGE Configurator</a>
+            <div class="hegeConfBtn" onclick="openConfigurator()">
+                <a class="hegeConfBtn-text" >HEGE Configurator</a>
             </div>
         </div>
-
-
     </div>
-
     <h2 class="hats-models-test">NEW HATS MODELS !</h2>
-
     <!--Loading from database !-->
     <div class="main-grid" id="main-grid"></div>
 
@@ -145,10 +136,55 @@
     </div>
 </div>
 
+<!--CONFIGURATOR-->
+<div id="confPopup" class="confPopup">
+    <div class="confH1" id="confH1">
+        <h2>We help you choose the next headwear.</h2>
+        <label for="sColor">What color would you like your headwear to be?</label>
+        <span class="custom-dropdown">
+            <select id="sColor">
+                <option>Black</option>
+                <option>Grey</option>
+                <option>Brown</option>
+                <option>Blue</option>
+            </select>
+        </span>
+        <label for="sSeason">For what season would you like your headwear to be suitable?</label>
+        <span class="custom-dropdown">
+            <select id="sSeason">
+                <option value="spring">Spring</option>
+                <option value="summer">Summer</option>
+                <option value="autumn">Autumn</option>
+                <option value="winter">Winter</option>
+            </select>
+        </span>
+        <label for="sGender">What gender?</label>
+        <span class="custom-dropdown" id="season">
+            <select id="sGender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </span>
+        <div class="hegeFindBtn" onclick="findConf()">
+            <a class="hegeFindBtn-text" >Find</a>
+        </div>
+    </div>
+    <div class="confH2" id="confH2">
+        <h2 id="confTitle">We find you this headwear !</h2>
+        <ul class="config_list" id="config_list">
+            <li><a>Hat 1</a></li>
+            <li><a>Hat 5</a></li>
+            <li><a>Hat 7</a></li>
+        </ul>
+        <div class="hegeFindBtn" onclick="openH1()">
+            <a class="hegeFindBtn-text">Back</a>
+        </div>
+    </div>
+</div>
 
 <div class="fade" id="fade" onclick="closeNavMobile()"></div>
 <div class="fade" id="fade-search" onclick="closeSearch()"></div>
-
+<div class="fade-config" id="fade-configurator" onclick="closeConfigurator()"></div>
 
 <!--MOBILE MENU-->
 <div id="mobileMenu" class="sidenavMobile">
@@ -156,7 +192,7 @@
         <i class="material-icons hamburger-menu-mobile" onclick="closeNavMobile()">menu</i>
         <!--Title-->
         <div class="title">
-            <p class="title-text-mobile">HEGE</p>
+            <p class="title-text-mobile" onclick="goHome()">HEGE</p>
         </div>
     </div>
     <h4>HATS FOR WOMEN</h4>

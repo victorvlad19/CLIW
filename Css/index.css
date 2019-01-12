@@ -68,10 +68,28 @@ hr{
 
 }
 
+.hegeFindBtn {
+    background: #0055BB;
+    width: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+
+}
+
 .hegeConfBtn-text{
     font-family: Roboto, Arial, sans-serif;
     color: white;
     text-align: left;
+    text-decoration: none;
+}
+
+.hegeFindBtn-text{
+    font-family: Roboto, Arial, sans-serif;
+    color: white;
+    text-align: left;
+    margin-left: 33px;
     text-decoration: none;
 }
 
@@ -108,6 +126,7 @@ hr{
 }
 
 .dropdown-content-search {
+    visibility: visible;
     display: none;
     width: 580px;
     position:absolute;
@@ -208,6 +227,22 @@ hr{
     z-index: 2;
 }
 
+
+.fade-config {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 5;
+}
 
 /*MAIN CONTENT*/
 .main {
@@ -425,7 +460,6 @@ hr{
 .search_list{
     list-style-type: none;
     display:block;
-
     margin-left: -40px;
     margin-right: 40px;
 }
@@ -436,11 +470,37 @@ hr{
     width:100%;
     max-height: 100%;
     color: #666666;
+    font-size: 14px;
+    font-family: Roboto, Arial, sans-serif;
 }
 
 .search_list>li:hover{
     background-color: #F1F1F1;
 }
+
+.config_list{
+    list-style-type: none;
+    display:block;
+    margin-left: -40px;
+    margin-right: 40px;
+}
+.config_list>li{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    width:100%;
+    font-weight: bold;
+    max-height: 100%;
+    color: black;
+    font-size: 14px;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+.config_list>li:hover{
+    background-color: #F1F1F1;
+}
+
+
 
 /*CART*/
 .cart-footer{
@@ -492,6 +552,66 @@ hr{
     content: "";
     display: table;
     clear: both;
+}
+
+/*CONFIGURATOR*/
+.confPopup{
+    display: none;
+    position: absolute;
+    width: 350px;
+    height: 390px;
+    border-radius: 10px;
+    z-index: 15;
+    top: 50%;
+    left: 50%;
+    margin: -220px 0 0 -205px;
+    background: white;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.confH1 > h2{
+    font-family: Roboto, Arial, sans-serif;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.confH2{
+    visibility: hidden;
+}
+
+.confH2 > h2{
+    font-family: Roboto, Arial, sans-serif;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.confH1 > label{
+    font-family: Roboto, Arial, sans-serif;
+    color: #161616;
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+.custom-dropdown{
+    margin-top: 10px;
+}
+
+/*DROPDOWN*/
+.custom-dropdown select {
+    width: 100%;
+    /* color: #878787; */
+    padding: 11px 20px;
+    text-align: left;
+    /* border: 0px; */
+    margin-bottom: 14px;
+    font-size: 16px;
+    font-weight: 300;
+    border-radius: 3px;
+    text-indent: 0.01px;
+    text-overflow: '';
+    -webkit-appearance: button; /* hide default arrow in chrome OSX */
 }
 
 /*RESPONSIVE*/

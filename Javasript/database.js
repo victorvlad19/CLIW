@@ -62,7 +62,6 @@ ref.on("value", function(snapshot) {
         document.getElementById("main-grid").appendChild(card);
 
 
-
         // TODO: Add Here Html Code
         // console.log(itemVal["Name"]);
     });
@@ -115,13 +114,10 @@ function onSideItemClicked() {
     }
 }
 
-
 function onSearch() {
     let hats = ["hat 1", "hat 2", "hat 3", "hat 4", "hat 5", "hat 6", "hat 7", "hat 8", "hat 9"];
     text = document.getElementById("searchBarInput").value;
-
     const ul = document.getElementById("search_list");
-
     if (text !== "") {
         document.getElementById("dropdown-content-search").style.display = "block";
         // Clear Button
@@ -132,25 +128,18 @@ function onSearch() {
             ul.innerHTML = '';
             for (const elem in matches) {
                 const li = document.createElement("li");
-
-
                 li.appendChild(document.createTextNode( capFirstLetter(matches[elem])));
-
                 li.onclick = e => {
                     sText = e.target.innerHTML;
                     window.location.href = "#detail";
-
                     // Query Database
                     let q = sText.replace(/\s+/g, '_');
-                    showPage(q)
+                    showPage(q);
                     closeSearch();
                 };
-
-
                 ul.appendChild(li);
             }
         }
-
     } else {
         ul.innerHTML = '';
         document.getElementById("dropdown-content-search").style.display = "none";
@@ -158,7 +147,6 @@ function onSearch() {
         document.getElementById("clearBtn").style.display = "none";
     }
 }
-
 
 function showPage(q) {
     let query = firebase.database().ref(q);

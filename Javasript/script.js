@@ -33,6 +33,98 @@ function closeSearch() {
     document.getElementById("searchBarInput").value = "";
 }
 
+function openConfigurator() {
+    document.getElementById("fade-configurator").style.display = "block";
+    document.getElementById("confPopup").style.display = "block";
+    openH1();
+    disableScroll()
+}
+
+function closeConfigurator() {
+    document.getElementById("fade-configurator").style.display = "none";
+    document.getElementById("confPopup").style.display = "none";
+    enableScroll()
+}
+
+function closeH1() {
+    document.getElementById("confH1").style.display = "none";
+    document.getElementById("confH2").style.visibility = "visible";
+}
+
+function findConf() {
+
+    const list_of_hats = [];
+    const ul = document.getElementById("config_list");
+
+    const color = document.getElementById("sColor");
+    const season = document.getElementById("sSeason");
+    const gender = document.getElementById("sGender");
+    const color_text = color.options[color.selectedIndex].text;
+    const season_text = season.options[season.selectedIndex].text;
+    const gender_text = gender.options[gender.selectedIndex].text;
+
+    ul.innerHTML = '';
+
+    // Check every element from database
+    ref.on("value", function(snapshot) {
+        snapshot.forEach(function(item) {
+            const itemVal = item.val();
+            if (itemVal["Color"] === color_text){
+                if (itemVal["Season"] === season_text) {
+                    if (itemVal["Gender"] === gender_text) {
+                        list_of_hats.push(itemVal["Name"]);
+                    }
+                }
+            }
+        });
+    }, function (error) {
+        console.log("Error: " + error.code);
+    });
+
+    if (list_of_hats.length === 0) {
+        document.getElementById("confTitle").innerHTML = "Sorry ! Nothing found, try again.";
+    } else {
+        document.getElementById("confTitle").innerHTML = "We find you this headwear !";
+        for (const hat in list_of_hats){
+            const li = document.createElement("li");
+            li.appendChild(document.createTextNode( capFirstLetter(list_of_hats[hat])));
+            li.onclick = e => {
+                window.location.href = "#detail";
+                sText = e.target.innerHTML;
+                // Query Database
+                let q = sText.replace(/\s+/g, '_');
+                showPage(q);
+                closeConfigurator();
+                // closeSearch();
+            };
+            ul.appendChild(li);
+        }
+    }
+
+    console.log(list_of_hats);
+    closeH1();
+}
+
+function openH1() {
+    document.getElementById("confH1").style.display = "block";
+    document.getElementById("confH2").style.visibility = "hidden";
+}
+
+function goHome() {
+    window.location.href = "#home";
+}
+
+function disableScroll(){
+    const x=window.scrollX;
+    const y=window.scrollY;
+    window.onscroll=function(){window.scrollTo(x, y);};
+}
+
+function enableScroll(){
+    window.onscroll=function(){};
+}
+
+
 // Close side-nav if open in Deskop mode
 var mql = window.matchMedia('(max-width: 1024px)');
 function screenTest(e) {
