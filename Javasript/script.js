@@ -20,6 +20,7 @@ function Search() {
 }
 
 function clearButton() {
+    document.getElementById("fade-search").style.display = "none";
     document.getElementById("searchBarInput").value = "";
     document.getElementById("dropdown-content-search").style.display="none";
     document.getElementById("clearBtn").style.display = "none";
@@ -62,13 +63,14 @@ function findConf() {
     const color_text = color.options[color.selectedIndex].text;
     const season_text = season.options[season.selectedIndex].text;
     const gender_text = gender.options[gender.selectedIndex].text;
-
     ul.innerHTML = '';
+    console.log("color_t:", color_text, "season_t:", season_text, "gender_t:", gender_text);
 
     // Check every element from database
     ref.on("value", function(snapshot) {
         snapshot.forEach(function(item) {
             const itemVal = item.val();
+            
             if (itemVal["Color"] === color_text){
                 if (itemVal["Season"] === season_text) {
                     if (itemVal["Gender"] === gender_text) {

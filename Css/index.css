@@ -139,6 +139,10 @@ hr{
     transition: all .5s ease-in-out;
 }
 
+.dropdown-content-search .search_list > li {
+    cursor: pointer;
+}
+
 .dropdown-content > button {
     margin-left: 120px;
     margin-bottom: 15px;
@@ -208,6 +212,10 @@ hr{
     float: right;
     margin-left: 10px;
     margin-top: 5px;
+}
+
+.shop-item-content > a {
+    cursor: pointer;
 }
 
 /*FADE*/
@@ -526,6 +534,7 @@ hr{
     margin-top: 3px;
     margin-left: 28px;
     font-family: "Roboto", "Segoe UI", serif;
+    cursor: pointer;
 }
 
 .column-login {
@@ -625,7 +634,7 @@ hr{
     .main-product {
         margin-left: 0px;
         width: 100%;
-    }
+    }  
 }
 
 @media screen and (max-width: 800px) {
